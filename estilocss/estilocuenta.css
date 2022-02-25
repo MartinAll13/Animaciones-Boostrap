@@ -1,0 +1,22 @@
+*{margin: 0%;
+    padding: 0%;
+
+
+}
+body {
+    background: linear-gradient(25deg, #345663, #0a2126);
+    color: white;
+  
+    font-family: "bayon";
+  }
+  .contenido{  height: 300px;
+      margin: 150px;
+      padding: 30px;
+      box-sizing: border-box;
+    display: flex;
+flex-direction: column;
+justify-items: center;
+align-items: center;
+font-family: "bayon"
+}
+  
