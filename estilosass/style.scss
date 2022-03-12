@@ -1,0 +1,456 @@
+@import "_variables.scss";
+
+/*---------------------ESTILO NOTICIAS----------------------------*/
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background: $colorbody;
+  color: $colortextos;
+}
+
+.not-list {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 30px 15px;
+
+  .not-img-1 {
+    background: url(../imagenes/not1.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-2 {
+    background: url(../imagenes/not27.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-3 {
+    background: url(../imagenes/not3.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-4 {
+    background: url(../imagenes/not4.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-5 {
+    background: url(../imagenes/not5.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-6 {
+    background: url(../imagenes/not6.jpeg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-7 {
+    background: url(../imagenes/not7.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-8 {
+    background: url(../imagenes/not8.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not-img-9 {
+    background: url(../imagenes/not9.jpg);
+    width: auto;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+  }
+  .not {
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .not:hover {
+    transform: translate(-5px, -5px);
+  }
+
+  .not-img-1:hover {
+    transform: scale(1.1);
+  }
+  .not-img-2:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-3:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-4:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-5:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-6:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-7:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-8:hover {
+    @extend .not-img-1:hover;
+  }
+  .not-img-9:hover {
+    @extend .not-img-1:hover;
+  }
+
+  .not_header {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .not_body {
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    span {
+      display: inline-block;
+      color: azure;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: $fontTitulos;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 15px;
+      font-family: $fontTexto;
+    }
+
+    .not_link {
+      display: block;
+      text-decoration: none;
+      background-color: aqua;
+      color: black;
+      width: 50%;
+      margin: auto;
+      border-radius: 20px;
+      &:hover {
+        transform: translate(-5px);
+      }
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .not-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*-------------------------- ESTILO INDEX --------------------------------------*/
+
+.calendario {
+  font-family: $fontTitulos;
+  color: $colortextos;
+
+  padding: 60px 25px;
+
+  text-align: center;
+
+  justify-content: space-between;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-area: 1fr 1fr;
+
+  .eventos {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+  }
+  @mixin Estilo($espacio, $ancho, $espacioIzq) {
+    margin-bottom: $espacio;
+    width: $ancho;
+    margin-left: $espacioIzq;
+  }
+  .eventos_imagen {
+    @include Estilo(3vw, 70%, 3%);
+  }
+  .eventos_imagen img {
+    border-radius: 10px;
+    max-width: 768px;
+  }
+  .eventos_pasados {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main .eventos {
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    .eventos_imagen {
+      width: 100vw;
+      margin: auto;
+      img {
+        margin: auto;
+      }
+    }
+    .eventos_pasados {
+      max-width: 85vw;
+      text-align: center;
+      width: 100vw !important;
+      margin: auto;
+    }
+    img {
+      display: block;
+      width: 350px;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 999px) {
+  * {
+    margin: 0%;
+  }
+  main .eventos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .eventos_imagen {
+    width: 100vw;
+  }
+
+  main .eventos_pasados {
+    justify-content: center;
+    min-width: 600px;
+    text-align: center;
+    width: 100vw !important;
+  }
+
+  main .imagen {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 550px;
+  }
+}
+
+/*-----------------ESTILO RADIO------------*/
+.mainradio {
+  font-family: $fontTitulos;
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+}
+
+.contenedorsound iframe {
+  iframe {
+    padding: 15px;
+  }
+}
+
+/*---------------ESTILO EVENTOS------------------------*/
+
+.contenedor {
+  flex-wrap: wrap;
+  .texto {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    color: $colortextos;
+    font-size: 15px;
+    text-align: center;
+  }
+  h1 {
+    font-family: $fontTitulos;
+  }
+  p {
+    font-family: $fontTexto;
+  }
+  .contenedor_eventos {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  .flyerEventos {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
+  }
+  img:hover {
+    transform: scale(1.3, 1.3);
+    transition: all 1s;
+    background-color: rgb(15, 148, 209);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .maineventos {
+    .contenedor_eventos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .maineventos {
+    .contenedor_eventos {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      justify-items: center;
+    }
+
+    .textos {
+      font-size: 10px;
+    }
+  }
+}
+
+/*---------------------------- ESTILO CONTACTO ----------------------------*/
+.container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+  .left {
+    background: linear-gradient(top blue, blue);
+  }
+  .contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(top blue, blue);
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  }
+  .right {
+    padding: 25px 40px;
+  }
+
+  h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .field {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: 0.3s;
+  }
+
+  .field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #0543c9;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #1e788f;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .container {
+    padding: 0%;
+
+    .contact-box {
+      min-width: 350px;
+    }
+  }
+}
