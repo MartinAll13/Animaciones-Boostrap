@@ -22,6 +22,10 @@ body {
   justify-content: center;
   align-content: center;
   padding: 30px 15px;
+  .contenido_noticias {
+    min-height: 430px;
+    max-height: 430px;
+  }
 
   .not-img-1 {
     background: url(../imagenes/not1.jpg);
@@ -181,7 +185,13 @@ body {
     flex-direction: column;
   }
 }
-
+@media (max-width: 410px) {
+  .not_body {
+    p {
+      display: none;
+    }
+  }
+}
 /*-------------------------- ESTILO INDEX --------------------------------------*/
 
 .calendario {
@@ -313,9 +323,7 @@ main {
     font-size: 15px;
     text-align: center;
   }
-  h1 {
-    font-family: $fontTitulos;
-  }
+  
   p {
     font-family: $fontTexto;
   }

@@ -18,6 +18,9 @@ body {
   justify-content: center;
   align-content: center;
   padding: 30px 15px; }
+  .not-list .contenido_noticias {
+    min-height: 430px;
+    max-height: 430px; }
   .not-list .not-img-1 {
     background: url(../imagenes/not1.jpg);
     width: auto;
@@ -126,6 +129,10 @@ body {
     display: flex;
     flex-direction: column; } }
 
+@media (max-width: 410px) {
+  .not_body p {
+    display: none; } }
+
 /*-------------------------- ESTILO INDEX --------------------------------------*/
 .calendario {
   font-family: "bebas neue";
@@ -221,8 +228,6 @@ main {
     color: #bdba97e6;
     font-size: 15px;
     text-align: center; }
-  .contenedor h1 {
-    font-family: "bebas neue"; }
   .contenedor p {
     font-family: "roboto"; }
   .contenedor .contenedor_eventos {
